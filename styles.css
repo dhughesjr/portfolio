@@ -9,7 +9,7 @@
 }
 
 img{ 
-    width: 100%;
+    width: 550px;
     display: flex;
 }
 
@@ -153,6 +153,13 @@ section .header{
     text-align: center;
     font-size: 2.25rem;
     font-weight: 600;
+}
+
+canvas{
+  height: 100vh;
+  z-index: -100000;
+  position: fixed;
+  top: 0px;
 }
 
 .features{

@@ -47,5 +47,35 @@ particlesJS("background", {
             opacity: 0.4,
             width: 1,
         },
-    }
-})
+
+        // Partical Movement
+        move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "bounce", // Behavior when particles move out of the canvas
+            bounce: false,
+        },
+    },
+
+        // Interactivity settings
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onHover: {
+                    enable: true, // Enable hover interactivity
+                    mode: "repulse",
+                },
+                onClick: {
+                    enable: true, // Enable for click
+                    mode: "push", // Push particles on click
+                },
+                resize: true, // Resize particles animation on window resize
+            },
+        },
+
+        // Detect retine display
+        retina_detect: true,
+});
