@@ -22,6 +22,40 @@ body{
     background-color: #18181B;
 }
 
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
 nav{
     /* width: 1800px; */
     /* position: fixed; */
@@ -33,7 +67,7 @@ nav{
     align-items: center;
     justify-content: space-around;
     gap: 2rem;
-    /* z-index: 1; */
+    z-index: 1;
 }
 
 .nav-selfie{
@@ -199,12 +233,45 @@ canvas{
     gap: 2rem;
 }
 
+.features-example{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.features-contact{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
 .features .card{
     background-color: #27272a;
     padding: 1rem;
     border: 2px solid transparent;
     border-radius: 15px;
     transition: all 0.3s ease;
+    /* width: 1100px; */
+}
+
+.features-example .card{
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    /* width: 1100px;  */
+}
+
+.features-contact .card{
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    /* width: 1100px;  */
 }
 
 .features .card:hover{
@@ -240,6 +307,63 @@ canvas{
 }
 
 .features .card a:hover{
+  color: #1e40af
+}
+
+.features .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.features .card span{
+    display: inline-block;
+    background-color: #1e40af;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.features-example .card h4{
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.features-example .card p{
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.features-example .card a{
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.features-example .card a:hover{
+  color: #1e40af
+}
+
+.features-contact .card h4{
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.features-contact .card p{
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.features-contact .card a{
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.features-contact .card a:hover{
   color: #1e40af
 }
 
@@ -293,6 +417,26 @@ section .sub-header{
     left: 0;
     height: 100%;
     background: #fff;
+}
+
+content .form-group{
+   margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 3rem;
+}
+
+label{
+  color: #fff;
+  margin-bottom: 0.5rem;
+  
+}
+
+input{
+  width: 200px;
+  height: 30px;
+  margin-bottom: 1rem;
 }
 /* 
 #myImg {
