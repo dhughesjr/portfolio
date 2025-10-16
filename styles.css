@@ -36,6 +36,17 @@ nav{
     z-index: 1;
 }
 
+.animated-heading{
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* font-weight: bolder; */
+}
+
+span#words{
+  font-weight: bolder;
+}
+
 .nav-selfie{
   max-width: 100px;
 }
@@ -133,6 +144,11 @@ header .content h1{
   font-weight: 700;
   line-height: 4rem;
 }
+
+/* header h1{
+  color: #fff;
+  font-weight: 500;
+} */
 
 header .content h1 span{
   -webkit-text-fill-color: transparent;
@@ -426,8 +442,6 @@ input{
   padding-bottom: 10px;
   background-color: transparent;
   transition: transform .2s;
-  /* width: 400px;
-  height: 400px */;
   margin: 0 auto;
 }
 

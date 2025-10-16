@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Portfolio</title>
     
 </head>
@@ -31,10 +32,13 @@
 
         <header class="container">
             <div class="content">
-                <span class="blur"></span>
-                <span class="blur"></span>
-                <H1>Hi, I'm <span>Don</span>, Web Developer</H1>
-                <p>
+               
+                    <span class="blur"></span>
+                    <!-- <span class="blur"></span> -->
+                     <div class="animated-heading">
+                    <h1>Hi, I'm Don a <span id="words">Web Developer</span></h1>
+                </div>
+                <p id="intro">
                     I have had the experience working multiple languages that support Front-End Development, Back-End Development, and Full Stack Development. 
                     Much of my experience has been working with the private sector, which I am unable to access the code base.
                 </p>
@@ -43,6 +47,24 @@
             <div class="image" style="top: 0.2px;">
                 <img src="images/developer.png" style="width:500px;height:300px;">
             </div>
+
+            <!-- <script type="text/javascript">
+        (function () {
+            var words = [
+            "A Web Developer",
+            "A Ui/ UX Designer",
+            "A Front-End Developer",
+            "A Back-End Developer"
+            ],
+            i = 0;
+            setInterval(function(){
+                $('#words').fadeOut(function(){
+                    $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+                });
+            }, 1000)
+        })();
+    </script> -->
+
         </header>
         
         <section id="tech-stack" class="container">
@@ -76,6 +98,13 @@
                         <span style="width: 70%">70%</span>
                     </div>
                  </div> 
+                 <div class="card">
+                    <span><img src="images/jquery.png"></i></span>
+                    <h4>jQuery</h4>
+                    <div class="skill_progress">
+                        <span style="width: 40%">40%</span>
+                    </div>
+                </div> 
                  <div class="card">
                 <span><i class="ri-database-2-fill"></i></span>
                     <h4>SQL/ MongoDB</h4>
@@ -242,10 +271,27 @@
                     </div>
         </div>
     </section>
+      
+    <script type="text/javascript">
+        (function () {
+            var words = [
+            "Web Developer",
+            "Ui/ UX Designer",
+            "Front-End Developer",
+            "Back-End Developer"
+            ],
+            i = 0;
+            setInterval(function(){
+                $('#words').fadeOut(function(){
+                    $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+                });
+            }, 1500)
+        })();
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="index.js"></script>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
