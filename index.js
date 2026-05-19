@@ -2,7 +2,7 @@ particlesJS("background", {
 
     particles: {
         number: {
-            value: 15, 
+            value: 30, 
             density: {
                 enable: true,
                 value_area: 300,
@@ -51,7 +51,7 @@ particlesJS("background", {
         // Partical Movement
         move: {
             enable: true,
-            speed: 2,
+            speed: 4,
             direction: "none",
             random: false,
             straight: false,
