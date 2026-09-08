@@ -33,6 +33,26 @@ nav{
     z-index: 1;
 }
 
+/* State when hidden on initial load */
+nav.nav-hidden{
+  transform: translateY(-100%);
+}
+
+/* State when revealed after scrolling */
+.visible{
+  opacity: 1;
+  transform: translateY(0); /* Slides it back down */ 
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: auto;
+}
+
+.center-block{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 .animated-heading{
   display: flex;
 }
@@ -105,7 +125,7 @@ span#words{
 .container{
   max-width: 1200px;  
   margin: auto;
-  padding: 12rem 2rem;
+  padding: 5rem 2rem;
 }
 
 .blur{
@@ -117,7 +137,7 @@ span#words{
 header{
   position: relative;
   padding-top: 2rem;
-  display: grid;
+  /*display: grid;*/
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 2rem;
