@@ -35,7 +35,7 @@ nav{
 
 /* State when hidden on initial load */
 .nav-hidden{
-  transform: translateY(-200%);
+  transform: translateY(-175%);
   pointer-events: none; /* Prevents interaction with the nav when hidden */
 }
 
