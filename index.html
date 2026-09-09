@@ -35,21 +35,13 @@
                      <div class="animated-heading">
                     <h1>Hi, I'm Don a <span id="words">Web Developer</span></h1>
                 </div>
-                <!-- <p id="intro">
-                    I have had the experience working multiple languages that support Front-End Development, Back-End Development, and Full Stack Development. 
-                    Much of my experience has been working with the private sector, which I am unable to access the code base.
-                </p> -->
                 <p id="intro" style="line-height: 2;">
-                    <strong>Full-stack Software Engineer</strong> with experience developing and supporting enterprise web applications using<strong> C#, ASP.NET, .NET, AngularJS, JavaScript, SQL, and cloud technologies.</strong>
+                    <strong>Full-stack Software Engineer</strong> with experience developing and supporting enterprise web applications using<strong> C#, .NET, AngularJS, JavaScript, SQL, and cloud technologies.</strong>
                     Proven ability to contribute across the software development lifecycle including application development, debugging, testing, deployment, and production support.
                     Experienced working in <strong>Agile environments with CI/CD pipelines, source control, and cross-functional collaboration</strong> to deliver scalable, maintainable software solutions.
                 </p>
                 <button class="btn">Get Started</button>
             </div>
-            <!-- <div class="image" style="top: 0.2px;">
-                <img src="images/selfie.jpeg" style="border-radius:50%; width:400px;height:400px">
-                style="width:350px;height:400px;/* padding-bottom: inherit; */position: relative;top: -25px;left: 10px;">
-            </div> -->
         </header>
         
         <section id="tech-stack" class="container">
@@ -270,6 +262,36 @@
                 });
             }, 2200)
         })();
+    </script>
+
+<!-- Starts the initial hide of the nav bar and makes it visible on scroll -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var lastScrollTop = 0;
+            var delta = 50; // Minimum scroll distance to trigger the effect
+            var navbarHeight = $('.nav-sticky').outerHeight();
+
+            $(window).scroll(function() {
+                var st = $(this).scrollTop();
+
+                // Ensure they scroll more than delta
+                if(Math.abs(lastScrollTop - st) <= delta)
+                    return;
+
+                if (st > lastScrollTop && st > navbarHeight){
+                    // Scroll Down
+                    $('.nav-sticky').removeClass('nav-hidden').addClass('is-visible');
+                } else {
+                    // Scroll Up
+                    if(st + $(window).height() < $(document).height()) {
+                        $('.nav-sticky').removeClass('is-visible').addClass('nav-hidden');
+                    }
+                }
+
+                lastScrollTop = st;
+            });
+        });
+
     </script>
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script> -->

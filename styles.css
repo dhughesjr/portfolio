@@ -34,12 +34,13 @@ nav{
 }
 
 /* State when hidden on initial load */
-nav.nav-hidden{
-  transform: translateY(-100%);
+.nav-hidden{
+  transform: translateY(-200%);
+  pointer-events: none; /* Prevents interaction with the nav when hidden */
 }
 
 /* State when revealed after scrolling */
-.visible{
+.nav.is-visible{
   opacity: 1;
   transform: translateY(0); /* Slides it back down */ 
   transition: opacity 0.3s ease, transform 0.3s ease;
